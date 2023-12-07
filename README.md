@@ -5,6 +5,9 @@ This is a ros wrapper package for PyTorch.
 - Make sure ROS is all set.
 - We ran the package on ROS NOETIC.
 
+## TO-DO-LIST
+- Test ```cuda``` availability. Feel free to ```pull request```, if you have done it!
+
 ## Installation
 - **Git Clone**. Run:
     ```
@@ -50,6 +53,9 @@ This package provide 2 functions:
     roslaunch torch_ros_wrapper TorchRosNodelet.launch
     ```
     The ```rosnode``` will try to load the ```model_cpp.pt``` that we just created, while ```rosnodelet``` does nothing. You can modify further.
+
+## Shoutout
+Our wrapper is based on https://github.com/ActiveIntelligentSystemsLab/pytorch_enet_ros. Yet, the above provides more detailed description on how to setup your environment, and it is for a more general case where you can include any model.
 
 ## Maintainer
 [pattylo](https://github.com/pattylo) @ AIRO-LAB @ RCUAS, HKPolyU

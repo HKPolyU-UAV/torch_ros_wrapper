@@ -1,5 +1,5 @@
 /*
-    This file is part of torch_ros_wrapper - the non-robocentric dynamic landing system for quadrotor
+    This file is part of torch_ros_wrapper
 
     torch_ros_wrapper is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

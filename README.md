@@ -38,10 +38,10 @@ This package provide 2 functions:
     roslaunch torch_ros_wrapper convertTrainedPt.launch
     ```
     *Remarks*: 
-    - <u>Put Trained .pt File</u>. Place your ```.pt``` trained file under ```/launch/model/```.
-    - <u>Put Trained .pt Filename</u>. Please modify rosparam in ```convertTrainedPt.launch``` accordingly to your ```.pt``` filename.
-    - <u>Put Model Class Script</u>. Under ```/scripts/models/```, please place your model PyTorch script. Here, we put a ```tcn.py```.
-    - <u>Modify Convert Script</u>. In ```/scripts/ConvertCppPt.py```, please first do ```import {your_model}``` at the top of the script. Then under function ```def load_custom_model(self):```, please instantiate ```self.your_model```.
+    - **Put Trained .pt File**. Place your ```.pt``` trained file under ```/launch/model/```.
+    - **Put Trained .pt Filename**. Please modify rosparam in ```convertTrainedPt.launch``` accordingly to your ```.pt``` filename.
+    - **Put Model Class Script**. Under ```/scripts/models/```, please place your model PyTorch script. Here, we put a ```tcn.py```.
+    - **Modify Convert Script**. In ```/scripts/ConvertCppPt.py```, please first do ```import {your_model}``` at the top of the script. Then under function ```def load_custom_model(self):```, please instantiate ```self.your_model```.
     
     After running the above, you should be able to see ```model_cpp.pt``` under ```/launch/model/```.
 - **RUN in ROS**. We provide 2 launch files for running libtorch. 1 in ```rosnode```, 1 in ```rosnodelet```. Just run:

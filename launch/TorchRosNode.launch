@@ -1,0 +1,8 @@
+<launch>
+    <!-- ROS Node -->
+    <node pkg="torch_ros_wrapper" type="lala" name="lala"  output="screen">
+        <param name="pt_file_loc" type="string" value="$(find torch_ros_wrapper)/launch/model/model_cpp.pt"/>
+    </node> 
+
+</launch>
+

@@ -1,0 +1,11 @@
+<launch>
+    <!-- ROS Nodelet manager -->
+    <node pkg="nodelet" type="nodelet" name="torch_ros_master" args="manager" output="screen">
+    </node> 
+
+    <!-- torch_ros_wrapperNodelet -->
+    <node pkg="nodelet" type="nodelet" name="torch_ros" args="load torch_ros/torch_ros_wrapperNodelet torch_ros_master" output="screen">
+    </node> 
+
+</launch>
+

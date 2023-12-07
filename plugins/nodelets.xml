@@ -1,0 +1,10 @@
+<library path="lib/libtorch_ros">
+    <class name ="torch_ros/torch_ros_wrapperNodelet" 
+        type="torch_ros::torch_ros_wrapperNodelet"
+        base_class_type="nodelet::Nodelet">
+        <description>
+            Launch nodelet here. torch_ros_wrapper it is.
+        </description>
+    </class>
+
+</library> 

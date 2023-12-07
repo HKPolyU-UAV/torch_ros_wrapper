@@ -33,15 +33,15 @@ This is a ros wrapper package for PyTorch.
     ```
 ## Usage
 This package provide 2 functions:
-- **Convert**. You can convert your model from PyTorch trained .pt to libtorch (C++) accessible .pt by running the following:
+- **Convert**. You can convert your model from PyTorch trained .pt to libtorch (C++) accessible .pt by running the following (see remarks first):
     ```
     roslaunch torch_ros_wrapper convertTrainedPt.launch
     ```
     *Remarks*: 
-    - Place your ```.pt``` file under ```/launch/model/```
-    - Please modify rosparam in ```convertTrainedPt.launch``` accordingly to your ```.pt``` filename.
-    - Under ```/scripts/models/```, please place your PyTorch script. Here, we put a ```tcn.py```.
-    - In ```/scripts/ConvertCppPt.py```, please first do ```import {your_model}``` at the top of the script. Then under function ```def load_custom_model(self):```, please instantiate ```self.your_model```.
+    - <u>Put Trained .pt File</u>. Place your ```.pt``` trained file under ```/launch/model/```.
+    - <u>Put Trained .pt Filename</u>. Please modify rosparam in ```convertTrainedPt.launch``` accordingly to your ```.pt``` filename.
+    - <u>Put Model Class Script</u>. Under ```/scripts/models/```, please place your model PyTorch script. Here, we put a ```tcn.py```.
+    - <u>Modify Convert Script</u>. In ```/scripts/ConvertCppPt.py```, please first do ```import {your_model}``` at the top of the script. Then under function ```def load_custom_model(self):```, please instantiate ```self.your_model```.
     
     After running the above, you should be able to see ```model_cpp.pt``` under ```/launch/model/```.
 - **RUN in ROS**. We provide 2 launch files for running libtorch. 1 in ```rosnode```, 1 in ```rosnodelet```. Just run:

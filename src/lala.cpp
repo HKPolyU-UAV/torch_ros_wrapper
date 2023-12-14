@@ -49,9 +49,14 @@ int main(int argc, char **argv)
         return -1;
     }
 
-    torch::Tensor input_data = torch::randn({1, 4, 160});
+    torch::Tensor input_data = torch::randn({1, 4, 200});
+
+    double tic = ros::Time::now().toSec();
     at::Tensor output = module.forward({input_data}).toTensor();
+    double tac = ros::Time::now().toSec();
+
     std::cout << output << std::endl<<std::endl;;
+    std::cout << "INFERENCE TIME: " << tac - tic << std::endl;
 
     ros::spin();
     
